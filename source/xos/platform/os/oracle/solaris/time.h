@@ -1,3 +1,4 @@
+/*/
 ///////////////////////////////////////////////////////////////////////
 /// Copyright (c) 1988-2019 $organization$
 ///
@@ -13,24 +14,25 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: time.h
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 7/29/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+/*/
+#ifndef _XOS_PLATFORM_OS_ORACLE_SOLARIS_TIME_H_
+#define _XOS_PLATFORM_OS_ORACLE_SOLARIS_TIME_H_
 
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/platform/Os.h"
 
-namespace xos {
-namespace platform {
-namespace os {
-namespace microsoft {
+#if defined(__cplusplus)
+extern "C" {
+#endif /*/ defined(__cplusplus) /*/
 
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
-} /// namespace xos
+typedef struct timespec timestruc_t;
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#if defined(__cplusplus)
+} /*/ extern "C" /*/
+#endif /*/ defined(__cplusplus) /*/
+
+#endif /*/ _XOS_PLATFORM_OS_ORACLE_SOLARIS_TIME_H_ /*/

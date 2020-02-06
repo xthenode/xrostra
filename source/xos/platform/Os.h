@@ -1,3 +1,4 @@
+/*/
 ///////////////////////////////////////////////////////////////////////
 /// Copyright (c) 1988-2019 $organization$
 ///
@@ -13,24 +14,33 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Os.h
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 5/5/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+/*/
+#ifndef _XOS_PLATFORM_OS_H_
+#define _XOS_PLATFORM_OS_H_
 
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/platform/Build.h"
 
-namespace xos {
-namespace platform {
-namespace os {
-namespace microsoft {
+#if defined(WINDOWS)  
+#include "xos/platform/microsoft/Windows.h"
+#elif defined(APPLEOSX)  
+#include "xos/platform/apple/Osx.h"
+#elif defined(APPLEIOS)  
+#include "xos/platform/apple/Ios.h"
+#elif defined(ANDROID)
+#include "xos/platform/google/Android.h"
+#elif defined(CHROMEOS)
+#include "xos/platform/google/Chromeos.h"
+#elif defined(LINUX)  
+#include "xos/platform/Linux.h"
+#else /*/ defined(WINDOWS)  /*/
+#include "xos/platform/Posix.h"
+#endif /*/ defined(WINDOWS)  /*/
 
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
-} /// namespace xos
+#include "xos/platform/Configure.h"
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#endif /*/ _XOS_PLATFORM_OS_H_ /*/

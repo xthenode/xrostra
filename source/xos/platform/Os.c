@@ -1,3 +1,4 @@
+/*/
 ///////////////////////////////////////////////////////////////////////
 /// Copyright (c) 1988-2019 $organization$
 ///
@@ -13,24 +14,26 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Os.c
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 5/5/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+/*/
+#include "xos/platform/Os.h"
 
-#include "xos/platform/os/microsoft/Windows.h"
-
-namespace xos {
-namespace platform {
-namespace os {
-namespace microsoft {
-
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
-} /// namespace xos
-
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#if defined(WINDOWS)  
+#include "xos/platform/microsoft/Windows.c"
+#elif defined(APPLEOSX)  
+#include "xos/platform/apple/Osx.c"
+#elif defined(APPLEIOS)  
+#include "xos/platform/apple/Ios.c"
+#elif defined(ANDROID)
+#include "xos/platform/google/Android.c"
+#elif defined(CHROMEOS)
+#include "xos/platform/google/Chromeos.c"
+#elif defined(LINUX)  
+#include "xos/platform/Linux.c"
+#else /*/ defined(WINDOWS)  /*/
+#include "xos/platform/Posix.c"
+#endif /*/ defined(WINDOWS)  /*/

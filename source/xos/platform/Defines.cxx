@@ -13,24 +13,18 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Defines.cxx
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 5/5/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/platform/Defines.hxx"
+#include "xos/platform/Defines.c"
 
 namespace xos {
 namespace platform {
-namespace os {
-namespace microsoft {
 
-} /// namespace microsoft
-} /// namespace os
+
 } /// namespace platform
 } /// namespace xos
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_

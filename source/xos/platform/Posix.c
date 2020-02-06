@@ -1,3 +1,4 @@
+/*/
 ///////////////////////////////////////////////////////////////////////
 /// Copyright (c) 1988-2019 $organization$
 ///
@@ -13,24 +14,24 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Posix.c
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 5/3/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+/*/
+#include "xos/platform/Posix.h"
 
-#include "xos/platform/os/microsoft/Windows.h"
-
+#if defined(__cplusplus)
 namespace xos {
 namespace platform {
-namespace os {
-namespace microsoft {
+#endif /*/ defined(__cplusplus)  /*/
 
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
-} /// namespace xos
+#if defined(__cplusplus)
+#else /*/ defined(__cplusplus)  /*/
+#endif /*/ defined(__cplusplus)  /*/
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#if defined(__cplusplus)
+} /*/ namespace platform /*/
+} /*/ namespace xos /*/
+#endif /*/ defined(__cplusplus)  /*/

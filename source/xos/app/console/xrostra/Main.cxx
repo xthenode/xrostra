@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////
-/// Copyright (c) 1988-2019 $organization$
+/// Copyright (c) 1988-2020 $organization$
 ///
 /// This software is provided by the author and contributors ``as is'' 
 /// and any express or implied warranties, including, but not limited to, 
@@ -13,24 +13,25 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Main.cxx
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 2/4/2020
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/console/Main_main.cxx"
+#include "xos/app/console/xrostra/Main.hxx"
 
 namespace xos {
-namespace platform {
-namespace os {
-namespace microsoft {
+namespace app {
+namespace console {
+namespace xrostra {
 
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
+///////////////////////////////////////////////////////////////////////
+///  Class: MainT
+///////////////////////////////////////////////////////////////////////
+static Main theMain;
+
+} /// namespace xrostra
+} /// namespace console
+} /// namespace app
 } /// namespace xos
-
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_

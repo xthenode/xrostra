@@ -13,24 +13,34 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: Os.cxx
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 5/5/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#include "xos/platform/Os.hxx"
+#include "xos/platform/Os.c"
 
-#include "xos/platform/os/microsoft/Windows.h"
+#if defined(WINDOWS)  
+#include "xos/platform/microsoft/Windows.cxx"
+#elif defined(APPLEOSX)  
+#include "xos/platform/apple/Osx.cxx"
+#elif defined(APPLEIOS)  
+#include "xos/platform/apple/Ios.cxx"
+#elif defined(ANDROID)
+#include "xos/platform/google/Android.cxx"
+#elif defined(CHROMEOS)
+#include "xos/platform/google/Chromeos.cxx"
+#elif defined(LINUX)  
+#include "xos/platform/Linux.cxx"
+#else /*/ defined(WINDOWS)  /*/
+#include "xos/platform/Posix.cxx"
+#endif /*/ defined(WINDOWS)  /*/
 
 namespace xos {
 namespace platform {
-namespace os {
-namespace microsoft {
 
-} /// namespace microsoft
-} /// namespace os
+
 } /// namespace platform
 } /// namespace xos
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_

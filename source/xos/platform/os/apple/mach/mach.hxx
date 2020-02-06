@@ -13,24 +13,27 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: mach.hxx
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 7/14/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#ifndef _XOS_PLATFORM_OS_APPLE_MACH_MACH_HXX_
+#define _XOS_PLATFORM_OS_APPLE_MACH_MACH_HXX_
 
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/platform/os/apple/mach/kern.hxx"
+#include "xos/platform/os/apple/mach/mach.h"
 
 namespace xos {
 namespace platform {
 namespace os {
-namespace microsoft {
+namespace apple {
+namespace mach {
 
-} /// namespace microsoft
+} /// namespace mach
+} /// namespace apple
 } /// namespace os
 } /// namespace platform
 } /// namespace xos
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#endif /// _XOS_PLATFORM_OS_APPLE_MACH_MACH_HXX_

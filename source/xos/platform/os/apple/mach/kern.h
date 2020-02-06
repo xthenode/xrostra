@@ -1,3 +1,4 @@
+/*/
 ///////////////////////////////////////////////////////////////////////
 /// Copyright (c) 1988-2019 $organization$
 ///
@@ -13,24 +14,32 @@
 /// or otherwise) arising in any way out of the use of this software, 
 /// even if advised of the possibility of such damage.
 ///
-///   File: Windows.hxx
+///   File: kern.h
 ///
 /// Author: $author$
-///   Date: 6/21/2019
+///   Date: 7/14/2019
 ///////////////////////////////////////////////////////////////////////
-#ifndef _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
-#define _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+/*/
+#ifndef _XOS_PLATFORM_OS_APPLE_MACH_KERN_H_
+#define _XOS_PLATFORM_OS_APPLE_MACH_KERN_H_
 
-#include "xos/platform/os/microsoft/Windows.h"
+#include "xos/platform/Os.h"
 
-namespace xos {
-namespace platform {
-namespace os {
-namespace microsoft {
+#if defined(APPLEOS)
+#define kern_return_t platform_kern_return_t
+#define KERN_SUCCESS PLATFORM_KERN_SUCCESS
+#define KERN_FAILURE PLATFORM_KERN_FAILURE
+#define KERN_ABORTED PLATFORM_KERN_ABORTED
+#define KERN_OPERATION_TIMED_OUT PLATFORM_KERN_OPERATION_TIMED_OUT
+#else /// defined(APPLEOS)
+#endif /// defined(APPLEOS)
 
-} /// namespace microsoft
-} /// namespace os
-} /// namespace platform
-} /// namespace xos
+typedef int kern_return_t;
+enum {
+    KERN_SUCCESS             =  0,
+    KERN_FAILURE             =  5,
+    KERN_ABORTED             = 14,
+    KERN_OPERATION_TIMED_OUT = 49,
+};
 
-#endif /// _XOS_PLATFORM_OS_MICROSOFT_WINDOWS_HXX_
+#endif /*/ _XOS_PLATFORM_OS_APPLE_MACH_KERN_H_ /*/
